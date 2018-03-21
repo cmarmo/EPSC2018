@@ -1,0 +1,198 @@
+\documentclass[10pt,twocolumn]{article}
+\usepackage{times}
+\usepackage[utf8x]{inputenc}
+\usepackage[final]{pdfpages}
+\usepackage{t1enc}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage[T1]{fontenc}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Set dimensions of columns, gap between columns, and paragraph indent
+%Please do not change/delete any of the settings in the following section as they
+%guarantee the correct formatting of your paper.
+\setlength{\textheight}{217mm}
+\setlength{\textwidth}{160mm}
+\setlength{\pdfpagewidth}{180mm}
+\setlength{\pdfpageheight}{237mm}
+
+\setlength{\columnsep}{8mm}
+
+\setlength{\topmargin}{0mm}
+
+\setlength{\footskip}{0mm}
+\setlength{\headheight}{0mm}
+\setlength{\headsep}{0mm}
+\setlength{\topskip}{0mm}
+
+\setlength{\voffset}{-15mm}
+\setlength{\hoffset}{-15mm}
+
+\newcommand{\Section}[1]{\vspace{-8pt}\section{\hskip -1em.~~#1}\vspace{-3pt}}
+\newcommand{\SubSection}[1]{\vspace{-3pt}\subsection{\hskip -1em.~~#1}
+      \vspace{-3pt}}
+
+\pagestyle{empty}
+
+%end of dimension settings
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+\twocolumn[
+\centering{\LARGE \bf A VOEvent model for Fireball and Sprite Optical Detections}
+%% Please include your paper title here!
+
+ \vskip10mm
+
+ \begin{flushleft}
+{\small A. Aman (1,2), B. Bman (2) and C. Cman (1) OR A. Aman (1) and/for the
+Team-Name\\%% Please include author name(s) in this/these line(s)!
+presenting author (if already known) shall be in bold (e.g. {\bf B. Bman});
+if there is only one affiliation, do not use any numbering (e.g. A. Aman, B. Bman and C. Cman)\\
+(1) Institute of Physics, Alaska, USA, (2) University of Katlenburg-Lindau, Germany (your@address.com / Fax:
++55-555-5555555)} %Please include affiliations here!
+\end{flushleft}
+
+%%%%%%%%%%%%%%%%%%%%%
+%Please do not change/delete the following vskip command as it
+%guarantees the correct distance between abstract information and abstract text.
+\vskip10mm %
+]
+%%%%%%%%%%%%%%%%%%%%%
+
+\thispagestyle{empty}
+
+\section*{Abstract} % Abstract section
+
+This is the abstract section of your paper. Please replace these instructions
+with the text of your abstract. The text will appear in two columns. In the
+final abstract file (after uploading into Copernicus Office)
+each of those two columns are 75 mm wide. If you are including figures, tables and equations,
+they MUST be imported into this file. The text will automatically wrap to a second page if necessary.
+
+\Section{Introduction} % Introduction
+
+This is the introduction section of your paper. All section headings are in a large
+bold font. All sections and subsections are numbered, respectively. Please
+use the Latex command ``$\backslash$Section'' for a numbered section,
+``$\backslash$section*'' (with an asterisk) for an unnumbered section and
+``$\backslash$SubSection'' for a sub-section. The sections and sub-sections are consecutively numbered.
+
+\SubSection{Sub-Section} % Sub-section
+
+This is the example of a sub-section. As mentioned above, please use the
+command ``$\backslash$SubSection\{Your sub-section title\}'' in order to include
+your sub-section title in the correct formatting. The sub-sections are also
+consecutively numbered.
+
+\Section{An additional section}
+
+You will find an example of how to include your Reference list with the
+LaTex bibliography environment at the end of this file. You may cite references with \cite{bib1} or
+\cite{bib2}. The reference list should be in an alphabetical order. All references
+are put in square brackets and the number in square brackets will appear in
+your paper if you use the ``$\backslash$cite\{citation\}'' command. Please note that it is sometimes
+necessary to run LaTex twice in order to have the citations be correctly included in the paper.
+
+\Section{Figures} % Figures
+
+You may use any of the common file types, such as .jpg, .tiff, .pdf, etc.
+In order to include a figure, please use the LaTex figure environment
+as shown in the template.
+
+%\begin{figure}[h]
+%\centerline{\includegraphics[width=\columnwidth]{Copernicus_Meetings}}
+%\caption{This is the example of an included figure.}
+%\label{logo}
+%\end{figure}
+
+\Section{Tables} % Tables
+
+You will find a sample of an included table below. Please use the LaTex table
+environment in order to include a table.
+
+\begin{table}[h]
+\caption{This is the example of an included table.}
+\vskip4mm
+\centering
+\begin{tabular}{lcr}
+\hline
+Column 1 & Column  2 & Column 3\\
+\hline
+Line 1 & Line 1 & Line 1\\
+Line 2 & Line 2 & Line 2\\
+Line 3 & Line 3 & Line 3\\
+Line 4 & Line 4 & Line 4\\
+Line 5 & Line 5 & Line 5\\
+Line 6 & Line 6 & Line 6\\
+Line 7 & Line 7 & Line 7\\
+Line 8 & Line 8 & Line 8\\
+Line 9 & Line 9 & Line 9\\
+Line 10 & Line 10 & Line 10\\
+Line 11 & Line 11 & Line 11\\
+Line 12 & Line 12 & Line 12\\
+Line 13 & Line 13 & Line 13\\
+Line 14 & Line 14 & Line 14\\
+Line 15 & Line 15 & Line 15\\
+\hline
+\end{tabular}
+\end{table}
+
+
+\Section{Equations} % Equations
+
+Below, you will find examples of two equations. You should use the LaTex
+equation environment to include your equation. The equation number is
+automatically placed at the right side of the column. The equations are also
+consecutively numbered.
+
+\begin{equation}
+a^2 + b^2 = c^2
+\end{equation}
+
+\begin{equation}
+E = m \cdot c^2
+\end{equation}
+
+\Section{Summary and Conclusions}
+
+After having finalized your paper in LaTex, please create a respective pdf
+file out of the LaTex document. The correct page settings and the formatting
+are guaranteed by the preamble which must not be deleted. Please note that you are asked to upload a
+pdf file during the abstract submission in Copernicus Office. No other file
+type than .pdf is accepted for the file upload. The actual citation header
+will be added automatically!
+
+\newpage
+
+
+% Example of an unnumbered section (asterisk at the section command).
+\section*{Acknowledgements}
+
+This is how to do an unnumbered section. In this example, the unnumbered section
+is the Acknowledgements section. Here, you may include all persons or
+institutions which you would like to thank. We recommend that the abstract is
+carefully compiled and thoroughly checked, in particular with regard to the
+list of authors, {\bf before} submission.
+
+\begin{thebibliography}{}
+
+\small
+
+\bibitem{bib1}
+Author, A., Author, B., and Author, C.: First example of a cited article title, First Example Journal, Vol. 1, pp. 1-100, 1999.
+
+\bibitem{bib2}
+Author, D. and Author, E.: Second example of a cited book, Example Publishing House,
+2000.
+
+\bibitem{bib3}
+Author, F.: Third example of a cited conference paper, The Great
+Science Conference, 1--7 February 2001, Sciencetown, Sciencecountry, 2001.
+
+\end{thebibliography}
+\end{document}
