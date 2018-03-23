@@ -43,18 +43,17 @@
 
 
 \twocolumn[
-\centering{\LARGE \bf A VOEvent model for Fireball and Sprite Optical Detections}
+\centering{\LARGE \bf A VOEvent model for Meteors and TLEs Optical Detections}
 %% Please include your paper title here!
 
  \vskip10mm
 
  \begin{flushleft}
-{\small A. Aman (1,2), B. Bman (2) and C. Cman (1) OR A. Aman (1) and/for the
-Team-Name\\%% Please include author name(s) in this/these line(s)!
-presenting author (if already known) shall be in bold (e.g. {\bf B. Bman});
-if there is only one affiliation, do not use any numbering (e.g. A. Aman, B. Bman and C. Cman)\\
-(1) Institute of Physics, Alaska, USA, (2) University of Katlenburg-Lindau, Germany (your@address.com / Fax:
-+55-555-5555555)} %Please include affiliations here!
+{\small C. Marmo (1), M. Garnung (2), P. Le Sidaner (3), B. Cecconi (4), S. Celestin (2) \\
+%% Please include author name(s) in this/these line(s)!
+%% presenting author (if already known) shall be in bold (e.g. {\bf B. Bman});
+(1)  (2) (3) (4)}
+%Please include affiliations here!
 \end{flushleft}
 
 %%%%%%%%%%%%%%%%%%%%%
@@ -68,35 +67,24 @@ if there is only one affiliation, do not use any numbering (e.g. A. Aman, B. Bma
 
 \section*{Abstract} % Abstract section
 
-This is the abstract section of your paper. Please replace these instructions
-with the text of your abstract. The text will appear in two columns. In the
-final abstract file (after uploading into Copernicus Office)
-each of those two columns are 75 mm wide. If you are including figures, tables and equations,
-they MUST be imported into this file. The text will automatically wrap to a second page if necessary.
+Atmospheric transient events are subject of observation and investigation of a growing community.
+Professional as well as amateur observation networks are established in Europe and abroad
+to collect data important not only for the scientific investigation of some physics processes
+but also to assess their possible impacts on Earth’s environment.
+We propose here an implementation of the Virtual Observatory Event standard to the domain of
+meteors and Transient Luminous Events (TLEs).
+A well establish standard for real-time alert on those domains will facilitate coordination between
+networks and make easier the extraction of critical information.
+Improving collaboration between the amateur community and agencies (eg the ESA Fireball Database,
+or the CNES Taranis mission). 
 
 \Section{Introduction} % Introduction
 
-This is the introduction section of your paper. All section headings are in a large
-bold font. All sections and subsections are numbered, respectively. Please
-use the Latex command ``$\backslash$Section'' for a numbered section,
-``$\backslash$section*'' (with an asterisk) for an unnumbered section and
-``$\backslash$SubSection'' for a sub-section. The sections and sub-sections are consecutively numbered.
+\cite{2017EPSC-a}
 
 \SubSection{Sub-Section} % Sub-section
 
-This is the example of a sub-section. As mentioned above, please use the
-command ``$\backslash$SubSection\{Your sub-section title\}'' in order to include
-your sub-section title in the correct formatting. The sub-sections are also
-consecutively numbered.
-
 \Section{An additional section}
-
-You will find an example of how to include your Reference list with the
-LaTex bibliography environment at the end of this file. You may cite references with \cite{bib1} or
-\cite{bib2}. The reference list should be in an alphabetical order. All references
-are put in square brackets and the number in square brackets will appear in
-your paper if you use the ``$\backslash$cite\{citation\}'' command. Please note that it is sometimes
-necessary to run LaTex twice in order to have the citations be correctly included in the paper.
 
 \Section{Figures} % Figures
 
@@ -160,39 +148,26 @@ E = m \cdot c^2
 
 \Section{Summary and Conclusions}
 
-After having finalized your paper in LaTex, please create a respective pdf
-file out of the LaTex document. The correct page settings and the formatting
-are guaranteed by the preamble which must not be deleted. Please note that you are asked to upload a
-pdf file during the abstract submission in Copernicus Office. No other file
-type than .pdf is accepted for the file upload. The actual citation header
-will be added automatically!
-
 \newpage
-
 
 % Example of an unnumbered section (asterisk at the section command).
 \section*{Acknowledgements}
 
-This is how to do an unnumbered section. In this example, the unnumbered section
-is the Acknowledgements section. Here, you may include all persons or
-institutions which you would like to thank. We recommend that the abstract is
-carefully compiled and thoroughly checked, in particular with regard to the
-list of authors, {\bf before} submission.
+This work benefits from support of VESPA/Europlanet.
+The Europlanet 2020 Research Infrastructure is funded by the European Union
+under the Horizon 2020 research and innovation program, grant agreement N.654208.
+This work is supported by the French Space Agency (CNES) through the satellite mission
+TARANIS and a Chair of Excellence to S.C from 10/2012 to 09/2017.
 
 \begin{thebibliography}{}
 
 \small
 
-\bibitem{bib1}
-Author, A., Author, B., and Author, C.: First example of a cited article title, First Example Journal, Vol. 1, pp. 1-100, 1999.
+\bibitem{2017EPSC-a}
+Cecconi, B., Le Sidaner, P., Andr\'e, N., Marmo, C. and Rasetti, S.: VOEvent for Solar and Planetary Sciences, European Planetary Science Congress, Vol. 11, id. EPSC2017-908, 2017.
 
-\bibitem{bib2}
-Author, D. and Author, E.: Second example of a cited book, Example Publishing House,
-2000.
-
-\bibitem{bib3}
-Author, F.: Third example of a cited conference paper, The Great
-Science Conference, 1--7 February 2001, Sciencetown, Sciencecountry, 2001.
+\bibitem{2017EPSC-b}
+Gangloff, M., Andr\'e, N., G\'enot, V., Cecconi, B., Le Sidaner, P., Bouchemit, M., Budnik, E. and Jourdane, N.: Implementation of a Space Weather VOEvent service at IRAP in the frame of Europlanet H2020 PSWS, European Planetary Science Congress, Vol. 11, id. EPSC2017-263, 2017.
 
 \end{thebibliography}
 \end{document}
