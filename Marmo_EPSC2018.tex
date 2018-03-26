@@ -93,35 +93,60 @@ A well defined standard describing observation metadata is then necessary in ord
 process those data and enable real-time updates  
 
 \Section{VOEvents for atmospheric surveillance}
-VOEvent \cite{voestd} is a standardized protocol developed to report observations of astronomical
+VOEvent\footnote{http://www.ivoa.net/documents/VOEventTransport/20170320/REC-VTP-2.0-20170320.html
+} is a standardized protocol developed to report observations of astronomical
 events.
 It has been officially adopted by the International Virtual Observatory Alliance (IVOA) in 2006.
 The VOEvent system is already used by several large-scale projects as the Gamma-Ray Coordinate
 System (GCN) \cite{gcn2008}, the Large Synoptic Survey Telescope (LSST),
 the European Low Frequency Array (LOFAR), or the Solar Dynamic Observatory (SDO).
-VOEvent is used for fast transmission of transient observations.
 In the framework of the Planetary Space Weather Service (PSWS) of the Europlanet-H2020 Research
 Insfrastructure (EPN2020RI) project \cite{2017EPSC-a}, we propose to
 use VOEvent for atmospheric observations like meteors and TLEs.
 
 \SubSection{Meteors}
-\cite{efn}
-\cite{fripon} \cite{prisma}
+Several camera networks already exist in Europe and around the world, aiming to detect and
+triangulate shooting, compute the trajectory of the possible meteorite and constrain
+the orbital properties of the meteoroid.
+Professional and amateur networks (see e.g. \cite{efn}, \cite{fripon}, \cite{prisma}, \cite{cement}... ...fill references...) working together will allow Europe to be completely independent
+in obtaining awareness about Earth space environnment and existing risks connected to Space Weather.
+ESA Space Situational Awareness program (ref?) would benefit from having a common and standard framework for sharing information on meteor and fireball detections.
 
+Example of meteor VOEvent here:
+https://gist.github.com/cmarmo/de5c0d5332444385ac0d4afc9a5dd92e
+  
 \SubSection{TLEs}
 Transient Luminous Events (TLEs) are large-scale optical events occurring in the upper-atmosphere 
 from the top of thunderclouds up to the  ionosphere.
+They are sometimes accompanied by terrestrial gamma-ray flashes (TGFs).
 TLEs may have important effects in local, regional, and global scales of the atmosphere,
 but many features of TLEs are not fully understood yet (e.g. \cite{pasko2010}). 
-They are sometimes accompanied by terrestrial gamma-ray flashes (TGFs).
+TARANIS (Tool for the Analysis of RAdiations from lightNIngs and Sprites) is a CNES satellite project dedicated to the study of impulsive transfers of energy between the Earth atmosphere and the space environment (citation?)
+The Taranis microsatellite will fly over thousands of TLEs and TGFs for at least two years.
+Its scientific instruments will be capable of detecting these events and recording their luminous and
+radiative signatures, as well as the electromagnetic perturbations they set off in Earth’s upper
+atmosphere.
+Coupling TLEs observation to the already existent meteor detection networks, will 
+allow the observation of TLEs over unprecedented space and time scales \cite{tleagu}, strongly
+increasing the probability of joint detection and hence the scientific return of space missions
+such as TARANIS and ASIM (ESA).
+
+Example of tle VOEvent here:
 
 
-The Taranis 1 microsatellite will fly over thousands of TLEs and TGFs for at least two years. Its scientific instruments will be capable of detecting these events and recording their luminous and radiative signatures at high resolution, as well as the electromagnetic perturbations they set off in Earth’s upper atmosphere.
-
-\cite{tleagu}
- the observation of TLEs over unprecedented space and time scales will strongly increase the probability of satellite-ground joint 
-detection and hence increase the scientific return of space missions such as ASIM (ESA) and TARANIS (CNES).
 \Section{Summary and Perspectives}
+\begin{itemize}
+\item{We propose an implementation of TLE and meteor VOEvent}
+\item{We have validated VOEvent structure and validated in th EPN2020 PSWS infrastructure}
+\end{itemize}
+
+Todo
+\begin{itemize}
+\item{Implementation in FreeTure}
+\item{Providing support for amateur and professional networks willing to adopt the VOEvent scheme}
+\item{...}
+\end{itemize}
+
 
 \newpage
 
@@ -162,7 +187,8 @@ Oberst, J., Molau, S., Heinlein, D., Gritzner, C., Schindler, M., Spurny, P., Ce
 \bibitem{pasko2010}
 Pasko, V. P.: Recent advances in theory of transient luminous events, J. Geophys. Res., 115, A00E35, 2010. doi:10.1029/2009JA014860.
 
-\bibitem{voestd}
-http://www.ivoa.net/documents/VOEventTransport/20170320/REC-VTP-2.0-20170320.html
+\bibitem{cement}
+Srba, J., Koukal, J., Ferus, M., Len$\check{z}$a, L., Gorkova, S., Civi$\check{s}$, S., Simon, J., Csorgei, T., Jedli$\check{c}$ka, M., Korec, M., Kaniansky, S., Pol\'ak, J., Spurn\'y, M., Br\'azdil, T., M$\ddot{a}$siar, J., Zima, M., Delin$\check{c}$\'ak, P., Popek, M., Bah\'yl, V., $\check{C}$echm\'anek, M.: Central European MetEor NeTwork: Current status and future activities, Journal of the International Meteor Organization, Vol. 44, pp. 71-77, 2016.
+
 \end{thebibliography}
 \end{document}
