@@ -1,0 +1,26 @@
+Comments to Chiara et al 2018
+
+1. I would be happy to be included in the EPSC paper - and hope that I can also contribute to the the real work! Kindly use two affiliations for me: (a) ESA/ESTEC, Noordwjik, The Netherlands, (b) Chair of Astronautics, TU Munich, Garching, Germany.
+
+And here are a few comments:
+
+2. I suggest to update the title: "A Virtual Observatory (VO) Event model for the optical detection of meteors and Transient Luminous Events"
+
+3. Abstract - "Atmospheric transient events..." - maybe add '...optical transient events' to make it clear that we are not after e.g. infrasound waves or the formation of rain drops.
+
+4. Abstract '... physics processes...' => '... physical processes ...'
+
+5. '... and make easier the extraction of critical information, and will come along with improved collaboration between the amateur community and agencies (e.g. the ESA Fireball Database, or the CNES Taranis mission).' => '... and simplify the extraction of critical information. This will result in improved collaboration...'.
+
+6. Introduction - here you link this to space weather. Here I may not have the right background - space weather effects are e.g. aurorae. Is this what you are after? I would not call an aurora a TLE. I always thought TLEs are e.g. sprites and elves. But they are not really linked to space weather, are they? Let me know what you think the link to space weather is. This comes back in section 2.1. Maybe we just need to define in the intro why we think meteors are linked to space weather? Note that within ESA, we deal with fireballs in the near-Earth object segment, not in the Space Weather segment.
+
+
+
+7. Section "VOEvents for ..." - "...by several large-scale projects as the Gamma-..." => ' ... *such* as the '
+
+8. Section 'Summary': 'VOEvent syntax will be implemented...' => 'The VOEvent syntax...' (add 'the')
+
+9. The footnote (5) is empty. I guess it should be deleted.
+
+--------------
+
