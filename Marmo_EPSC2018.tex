@@ -43,19 +43,22 @@
 
 
 \twocolumn[
-\centering{\LARGE \bf A VOEvent model for Meteors and TLEs Optical Detections}
+\centering{\LARGE \bf A Virtual Observatory (VO) Event model for the optical detection of meteors and Transient Luminous Events}
 %% Please include your paper title here!
 
  \vskip10mm
 
  \begin{flushleft}
-{\small C. Marmo (1), M. Garnung (2), P. Le Sidaner (3), B. Cecconi (4), S. Celestin (2) \\
+{\small C. Marmo (1), M. Garnung (2), P. Le Sidaner (3), B. Cecconi (4), S. Celestin (2), D. Koschny (5)(6) \\
 %% Please include author name(s) in this/these line(s)!
 %% presenting author (if already known) shall be in bold (e.g. {\bf B. Bman});
 (1) GEOPS, Univ. Paris-Sud, CNRS, Univ. Paris-Saclay, Orsay, France, (chiara.marmo@u-psud.fr),
 (2) LPC2E, University of Orleans, CNRS, Orleans, France,
 (3) DIO, Observatoire de Paris, PSL Research University, CNRS, Paris, France,
-(4) LESIA, Observatoire de Paris, Universit\'e PSL, CNRS, Sorbonne Universit\'e, Univ. Paris Diderot, Sorbonne Paris Cit\'e, Meudon, France}
+(4) LESIA, Observatoire de Paris, Universit\'e PSL, CNRS, Sorbonne Universit\'e, Univ. Paris Diderot, Sorbonne Paris Cit\'e, Meudon, France,
+(5) ESA/ESTEC, Noordwjik, The Netherlands,
+(6) Chair of Astronautics, TU Munich, Garching, Germany.
+}
 %Please include affiliations here!
 \end{flushleft}
 
@@ -69,14 +72,15 @@
 \thispagestyle{empty}
 
 \section*{Abstract} % Abstract section
-Atmospheric transient events are subject of observation and investigation of a growing community.
+Optical counterparts of atmospheric transient events are subject of observation and investigation
+of a growing community.
 Professional as well as amateur observation networks are established in Europe and abroad
-to collect data important not only for the scientific investigation of some physics processes
+to collect data important not only for the scientific investigation of some physical processes
 but also to assess their possible impacts on Earth’s environment.
 We propose here an implementation of the Virtual Observatory Event standard to the domain of
 meteors and Transient Luminous Events (TLEs).
 A well established standard for real-time alert on those domains will facilitate coordination between
-networks and make easier the extraction of critical information, and will come along with improved
+networks and simplify the extraction of critical information. This will result in improved
 collaboration between the amateur community and agencies (e.g. the ESA Fireball Database, or the CNES
 Taranis mission). 
 \Section{Introduction} % Introduction
@@ -95,7 +99,7 @@ is a standardized protocol developed to report observations of astronomical even
 It has been officially adopted by the International Virtual Observatory Alliance (IVOA) in 2006.
 A VOEvent alert has a generic structure defined by the standard tags:\verb|<who>|, \verb|<how>|,
 \verb|<what>|, \verb|<why>|, \verb|<wherewhen>|.
-The VOEvent system is already used by several large-scale projects as the Gamma-Ray Coordinate
+The VOEvent system is already used by several large-scale projects such as the Gamma-Ray Coordinate
 System (GCN), the Large Synoptic Survey Telescope (LSST),
 the European Low Frequency Array (LOFAR), or the Solar Dynamic Observatory (SDO).
 In the framework of the Planetary Space Weather Service (PSWS) of the Europlanet-H2020 Research
@@ -137,7 +141,7 @@ we propose to use the VOEvent standard for the surveillance of transient atmosph
 like meteors and TLEs.
 We have validated the proposed syntax\footnote{https://gist.github.com/cmarmo/de5c0d5332444385ac0d4afc9a5dd92e}\textsuperscript{,}\footnote{} in the EPN2020 PSWS infrastructure.
 
-VOEvent syntax will be implemented in the meteor and TLE detection software FreeTure \cite{freeture}, 
+The VOEvent syntax will be implemented in the meteor and TLE detection software FreeTure \cite{freeture}, 
 and we will provide support for amateur and professional networks willing to adopt the VOEvent scheme.
 \newpage
 % Example of an unnumbered section (asterisk at the section command).
