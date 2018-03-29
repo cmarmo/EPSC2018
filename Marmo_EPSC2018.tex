@@ -69,58 +69,59 @@
 \thispagestyle{empty}
 
 \section*{Abstract} % Abstract section
-
 Atmospheric transient events are subject of observation and investigation of a growing community.
 Professional as well as amateur observation networks are established in Europe and abroad
 to collect data important not only for the scientific investigation of some physics processes
 but also to assess their possible impacts on Earth’s environment.
 We propose here an implementation of the Virtual Observatory Event standard to the domain of
 meteors and Transient Luminous Events (TLEs).
-A well establish standard for real-time alert on those domains will facilitate coordination between
+A well established standard for real-time alert on those domains will facilitate coordination between
 networks and make easier the extraction of critical information, and will come along with improved
 collaboration between the amateur community and agencies (e.g. the ESA Fireball Database, or the CNES
 Taranis mission). 
-
 \Section{Introduction} % Introduction
 Atmospheric transient events are observed and analyzed for space weather forecasting or for scientific
 research in an increasingly systematic way.
-In particular meteor and Transient Luminous Events (TLEs) have often been subject of paired 
-optical observation campaigns, as both benefit from continuous sky monitoring and similar
-hardware installations.
-
+In particular meteors and Transient Luminous Events (TLEs) have often been subject of paired 
+optical observation campaigns, as their monitoring benefits from continuous sky surveillance and
+similar hardware installations.
 Data provided by professional and amateur observers need to be compared, merged and archived.
 A well defined standard describing observation metadata is then necessary in order to efficiently
-process those data and enable real-time updates  
-
+process those data and enable real-time updates.  
 \Section{VOEvents for atmospheric surveillance}
 VOEvent\footnote{http://www.ivoa.net/documents/VOEventTransport/20170320/REC-VTP-2.0-20170320.html
-} is a standardized protocol developed to report observations of astronomical
-events.
+}\textsuperscript{,}\footnote{http://www.ivoa.net/documents/VOEvent/20110711/REC-VOEvent-2.0.pdf}
+is a standardized protocol developed to report observations of astronomical events.
 It has been officially adopted by the International Virtual Observatory Alliance (IVOA) in 2006.
+A VOEvent alert has a generic structure defined by the standard tags:\verb|<who>|, \verb|<how>|,
+\verb|<what>|, \verb|<why>|, \verb|<wherewhen>|.
 The VOEvent system is already used by several large-scale projects as the Gamma-Ray Coordinate
-System (GCN) \cite{gcn2008}, the Large Synoptic Survey Telescope (LSST),
+System (GCN), the Large Synoptic Survey Telescope (LSST),
 the European Low Frequency Array (LOFAR), or the Solar Dynamic Observatory (SDO).
 In the framework of the Planetary Space Weather Service (PSWS) of the Europlanet-H2020 Research
 Insfrastructure (EPN2020RI) project \cite{2017EPSC-a}, we propose to
 use VOEvent for atmospheric observations like meteors and TLEs.
-
 \SubSection{Meteors}
 Several camera networks already exist in Europe and around the world, aiming to detect and
-triangulate shooting, compute the trajectory of the possible meteorite and constrain
+triangulate shooting stars, compute the trajectory of the possible meteorite and constrain
 the orbital properties of the meteoroid.
-Professional and amateur networks (see e.g. \cite{efn}, \cite{fripon}, \cite{prisma}, \cite{cement}... ...fill references...) working together will allow Europe to be completely independent
+Professional and amateur networks (see among others \cite{efn}, \cite{fripon}, \cite{prisma},
+\cite{BOAMstd}) working together will allow Europe to be completely independent
 in obtaining awareness about Earth space environnment and existing risks connected to Space Weather.
-ESA Space Situational Awareness program (ref?) would benefit from having a common and standard framework for sharing information on meteor and fireball detections.
-
-Example of meteor VOEvent here:
-https://gist.github.com/cmarmo/de5c0d5332444385ac0d4afc9a5dd92e
-  
+European Space Situational Awareness national programs would benefit from having a common and
+standard framework for sharing information on meteor and fireball detections, and their contribution
+to the ESA Fireball Information System\footnote{http://neo.ssa.esa.int/search-for-fireballs} would
+become more efficient.
+A Virtual Meteor Observatory initiative has already taken life in a European context \cite{Koschny2008}
+\cite{Barentsen2010}, ending up in the adoption of an XML-based communication format.
+Its connection to VOEvent standard will guarantee its sustainability in a larger and well documented
+context. 
 \SubSection{TLEs}
 Transient Luminous Events (TLEs) are large-scale optical events occurring in the upper-atmosphere 
 from the top of thunderclouds up to the  ionosphere.
 They are sometimes accompanied by terrestrial gamma-ray flashes (TGFs).
 TLEs may have important effects in local, regional, and global scales of the atmosphere,
-but many features of TLEs are not fully understood yet (e.g. \cite{pasko2010}). 
+but many features of TLEs are not fully understood yet. 
 TARANIS (Tool for the Analysis of RAdiations from lightNIngs and Sprites) is a CNES satellite project dedicated to the study of impulsive transfers of energy between the Earth atmosphere and the space environment (citation?)
 The Taranis microsatellite will fly over thousands of TLEs and TGFs for at least two years.
 Its scientific instruments will be capable of detecting these events and recording their luminous and
@@ -130,65 +131,50 @@ Coupling TLEs observation to the already existent meteor detection networks, wil
 allow the observation of TLEs over unprecedented space and time scales \cite{tleagu}, strongly
 increasing the probability of joint detection and hence the scientific return of space missions
 such as TARANIS and ASIM (ESA).
-
-Example of tle VOEvent here:
-
-
 \Section{Summary and Perspectives}
-\begin{itemize}
-\item{We propose an implementation of TLE and meteor VOEvent}
-\item{We have validated VOEvent structure and validated in th EPN2020 PSWS infrastructure}
-\end{itemize}
+In the framework of the Europlanet-H2020 Research Insfrastructure (EPN2020RI) project
+we propose to use the VOEvent standard for the surveillance of transient atmospheric events
+like meteors and TLEs.
+We have validated the proposed syntax\footnote{https://gist.github.com/cmarmo/de5c0d5332444385ac0d4afc9a5dd92e}\textsuperscript{,}\footnote{} in the EPN2020 PSWS infrastructure.
 
-Todo
-\begin{itemize}
-\item{Implementation in FreeTure}
-\item{Providing support for amateur and professional networks willing to adopt the VOEvent scheme}
-\item{...}
-\end{itemize}
-
-
+VOEvent syntax will be implemented in the meteor and TLE detection software FreeTure \cite{freeture}, 
+and we will provide support for amateur and professional networks willing to adopt the VOEvent scheme.
 \newpage
-
 % Example of an unnumbered section (asterisk at the section command).
 \section*{Acknowledgements}
 This work benefits from support of VESPA/Europlanet.
 The Europlanet 2020 Research Infrastructure is funded by the European Union
 under the Horizon 2020 research and innovation program, grant agreement N.654208.
 This work is supported by the French Space Agency (CNES) through the satellite mission
-TARANIS and a Chair of Excellence to S.C from 10/2012 to 09/2017.
-
+TARANIS.
 \begin{thebibliography}{}
-
 \small
-
-\bibitem{gcn2008}
-Barthelmy, S.: GCN and VOEvent: A status report, Astronomische Nachrichten, Vol. 329, p.340, 2008.
-doi:10.1002/asna.200710954
-
+\bibitem{freeture}
+Audureau, Y., Marmo, C., Bouley, S., Kwon, M.-K., Colas, F., Vaubaillon, J., Birlan, M., Zanda, B., Vernazza, P., Caminade, S. and Gattacceca, J.: FreeTure: A Free software to capTure meteors for FRIPON, International Meteor Conference, pp 39-41, 2014.
+\bibitem{Barentsen2010}
+Barentsen, G., Arlt, R., Koschny, D., Atreya, P., Flohrer, J., Jopek, T., Knofel, A., Koten, P., McAuliffe, J., Oberst, J., Toth, J., Vaubaillon, J., Weryk, R., Wisniewski, M. and Zoladek, P.: The VMO file format. I. Reduced camera meteor and orbit data, Journal of the International Meteor Organization, Vol. 38, pp. 10-24, 2010.
+%\bibitem{gcn2008}
+%Barthelmy, S.: GCN and VOEvent: A status report, Astronomische Nachrichten, Vol. 329, p.340, 2008.
+%doi:10.1002/asna.200710954
 \bibitem{2017EPSC-a}
 Cecconi, B., Le Sidaner, P., Andr\'e, N., Marmo, C. and Rasetti, S.: VOEvent for Solar and Planetary Sciences, European Planetary Science Congress, Vol. 11, id. EPSC2017-908, 2017.
-
 \bibitem{fripon}
-Colas, F., Zanda, B., Bouley, S., Vaubaillon, J., Marmo, C., Audureau, Y., Kwon, M.~K., Rault, J.~L., Caminade, S., Vernazza, P., Gattacceca, J., Birlan, M., Maquet, L., Egal, A., Rotaru, M., Gruson-Daniel, Y., Birnbaum, C., Cochard, F., Thizy, O.: FRIPON, the French fireball network, European Planetary Science Congress, Vol. 10, id. EPSC2015-800, 2015
-
+Colas, F., Zanda, B., Bouley, S., Vaubaillon, J., Marmo, C., Audureau, Y., Kwon, M.~K., Rault, J.~L., Caminade, S., Vernazza, P., Gattacceca, J., Birlan, M., Maquet, L., Egal, A., Rotaru, M., Gruson-Daniel, Y., Birnbaum, C., Cochard, F., Thizy, O.: FRIPON, the French fireball network, European Planetary Science Congress, Vol. 10, id. EPSC2015-800, 2015.
 %\bibitem{2017EPSC-b}
 %Gangloff, M., Andr\'e, N., G\'enot, V., Cecconi, B., Le Sidaner, P., Bouchemit, M., Budnik, E. and Jourdane, N.: Implementation of a Space Weather VOEvent service at IRAP in the frame of Europlanet H2020 PSWS, European Planetary Science Congress, Vol. 11, id. EPSC2017-263, 2017.
-
 \bibitem{prisma}
-Gardiol, D., Cellino, A., and Di Martino, M.: PRISMA, Italian network for meteors and atmospheric studies, International Meteor Conference, Egmond, the  Netherlands, pp. 76–79, 2016.
-
+Gardiol, D., Cellino, A., and Di Martino, M.: PRISMA, Italian network for meteors and atmospheric studies, International Meteor Conference, pp. 76–79, 2016.
 \bibitem{tleagu}
-Garnung, M. B., and Celestin, S.: Detecting TLEs using a massive all-sky camera network, AGU Fall Meeting, New Orleans, LA, USA,id. AE23A-2469, 2017.
-
+Garnung, M. B., and Celestin, S.: Detecting TLEs using a massive all-sky camera network, AGU Fall Meeting, New Orleans, LA, USA, id. AE23A-2469, 2017.
+\bibitem{Koschny2008}
+Koschny, D., Mc Auliffe, J. and Barentsen, G.: The IMO Virtual Meteor Observatory (VMO): Architectural Design, Earth, Moon, and Planets, Vol. 102, pp. 247-252, 2008. doi:10.1007/s11038-007-9216-9
+\bibitem{BOAMstd}
+Jouin, S., Gulon, T., Brunet, J. and Leroy, A.: Using BOAM to post meteor data from UFOAnalyzer into the Virtual Meteor Observatory, International Meteor Conference, pp 125-126, 2013.
 \bibitem{efn}
 Oberst, J., Molau, S., Heinlein, D., Gritzner, C., Schindler, M., Spurny, P., Ceplecha, Z., Rendtel, Betlem, H.: The ``European Fireball Network'': Current status and future prospects, Meteoritics and Planetary Science, Vol. 33, 1998. doi:10.1111/j.1945-5100.1998.tb01606.x
-
-\bibitem{pasko2010}
-Pasko, V. P.: Recent advances in theory of transient luminous events, J. Geophys. Res., 115, A00E35, 2010. doi:10.1029/2009JA014860.
-
-\bibitem{cement}
-Srba, J., Koukal, J., Ferus, M., Len$\check{z}$a, L., Gorkova, S., Civi$\check{s}$, S., Simon, J., Csorgei, T., Jedli$\check{c}$ka, M., Korec, M., Kaniansky, S., Pol\'ak, J., Spurn\'y, M., Br\'azdil, T., M$\ddot{a}$siar, J., Zima, M., Delin$\check{c}$\'ak, P., Popek, M., Bah\'yl, V., $\check{C}$echm\'anek, M.: Central European MetEor NeTwork: Current status and future activities, Journal of the International Meteor Organization, Vol. 44, pp. 71-77, 2016.
-
+%\bibitem{pasko2010}
+%Pasko, V. P.: Recent advances in theory of transient luminous events, J. Geophys. Res., 115, A00E35, 2010. doi:10.1029/2009JA014860.
+%\bibitem{cement}
+%Srba, J., Koukal, J., Ferus, M., Len$\check{z}$a, L., Gorkova, S., Civi$\check{s}$, S., Simon, J., Csorgei, T., Jedli$\check{c}$ka, M., Korec, M., Kaniansky, S., Pol\'ak, J., Spurn\'y, M., Br\'azdil, T., M$\ddot{a}$siar, J., Zima, M., Delin$\check{c}$\'ak, P., Popek, M., Bah\'yl, V., $\check{C}$echm\'anek, M.: Central European MetEor NeTwork: Current status and future activities, Journal of the International Meteor Organization, Vol. 44, pp. 71-77, 2016.
 \end{thebibliography}
 \end{document}
