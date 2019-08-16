@@ -7,4 +7,4 @@ European Planetary Science Congress 2018
 
 TU Berlin | Berlin | Germany
 
-See the [pdf version](https://meetingorganizer.copernicus.org/EPSC2018/EPSC2018-459.pdf)
+See the [online pdf version](https://meetingorganizer.copernicus.org/EPSC2018/EPSC2018-459.pdf).
